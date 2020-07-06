@@ -22,33 +22,39 @@ function moveImage(direction) {
     let imgObjStyle = imgObj.style;
     let imgObjStyleDirection;
 
+    //Right
     if(direction === 'KeyD') {        
-        imgObjStyleDirection = imgObjStyle.left;
-        imgObjStyleDirection = parseInt(imgObjStyleDirection) + 10 + 'px';
+       // imgObjStyleDirection = imgObjStyle.left;
+        //imgObjStyleDirection = parseInt(imgObjStyleDirection) + 10 + 'px';
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
     }
 
+    //Up
     if(direction === 'KeyA') {
-        imgObjStyleDirection = imgObjStyle.left;
-        imgObjStyleDirection = parseInt(imgObjStyleDirection) - 10 + 'px';
+        //imgObjStyleDirection = imgObjStyle.left;
+        //imgObjStyleDirection = parseInt(imgObjStyleDirection) - 10 + 'px';
+        imgObj.style.left = parseInt(imgObj.style.top) - 10 + 'px';
     }
-
+    //Left
     if(direction === 'KeyW') {
-        imgObjStyleDirection = imgObjStyle.top;
-        imgObjStyleDirection = parseInt(imgObjStyleDirection) - 10 + 'px';
+        //imgObjStyleDirection = imgObjStyle.top;
+        //imgObjStyleDirection = parseInt(imgObjStyleDirection) - 10 + 'px';
+        imgObj.style.top = parseInt(imgObj.style.left) - 10 + 'px';
     }
 
-    
+    //Down
     if(direction === 'KeyS') {
-        imgObjStyleDirection = imgObjStyle.top;
-        imgObjStyleDirection = parseInt(imgObjStyleDirection) + 10 + 'px';
+        //imgObjStyleDirection = imgObjStyle.top;
+        //imgObjStyleDirection = parseInt(imgObjStyleDirection) + 10 + 'px';
+        imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
     }
 }
 
 function init() {
     imgObj = document.getElementById('myImage');
     imgObj.style.position = 'relative';
-    imgObj.style.left = '0px';
-    imgObj.style.top = '0px';
+    imgObj.style.left = '10px';
+    imgObj.style.top = '10px';
 }
 
 
